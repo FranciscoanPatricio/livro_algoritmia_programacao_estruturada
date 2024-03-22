@@ -1,0 +1,13 @@
+//ask for a number and print while int and after converting to float
+#include <stdio.h>
+
+int main (){
+    int number;
+    printf("Insira um numero: \n");
+    scanf("%i", &number); //ask user for a input
+
+    printf("O numero inteiro e %i\n", number);
+    printf("%f", (float)(number));  // convert float
+
+    return 0;
+}
