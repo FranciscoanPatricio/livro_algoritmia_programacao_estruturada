@@ -1,0 +1,10 @@
+#include <math.h> //import math library so i can have acess to math functions.
+#include <stdio.h>
+
+int main(){
+    printf("3^5 = %.0f\n", pow(3, 5)); //pow return float
+    printf("%.0f\n", 3.1234512354); //float 0 decimal places
+    printf("seno de 30º vai ser %.2f",  sin(30*(3.14/180))); //float of sin with 2 decimal places (rad = degree*(PI/180))
+
+    return 0;
+}
