@@ -1,0 +1,13 @@
+// output duas strings.
+
+#include <stdio.h>
+
+int main (){
+    
+    char texto1 [7]= "amigos"; // or char texto1[6] "amigos\0";  
+    char texto2 [11]= "bem-vindos";
+
+    printf("Caros %s sejam %s ao Java!", texto1, texto2);
+
+    return 0;
+}
