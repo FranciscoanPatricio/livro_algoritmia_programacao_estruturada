@@ -1,0 +1,10 @@
+//output "Bem vindos ao c."
+
+#include <stdio.h> //import library that include scanf/printf
+
+int main(){
+
+    printf("Bem vindos ao c."); // print no terminal da mensagem
+
+    return 0; 
+}
