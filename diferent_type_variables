@@ -1,0 +1,14 @@
+//diferent types of variables
+#include <stdio.h>
+
+int main(){
+    char B = 'A';
+    short S = 32000;
+    int I = 1000000012;
+    long L = 15323333;
+    float F = 100*100;
+    double D = 6700000000000; 
+  
+    printf("%c, %hi, %d, %ld, %.2f, %.2f", B, S, I, L, F, D); // %.2 baout decimal places.
+    return 0;
+}
