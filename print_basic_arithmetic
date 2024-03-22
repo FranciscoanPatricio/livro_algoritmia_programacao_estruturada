@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+int main(){
+
+    printf("4+3(15-2)=%i\n", 4 + 3 *(15 -2));
+    printf("40 a dividir por 9 é igual %i\n", 40 / 9);
+    printf("E o resto da divisão de 40 por 3 é igual %i", 40 % 3);
+    return 0;
+}
