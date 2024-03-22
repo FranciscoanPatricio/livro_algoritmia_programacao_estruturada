@@ -1,0 +1,16 @@
+//output de varias strings com "tab"
+#include <stdio.h>
+
+int main(){
+    char palavra1 [20] = "Ana Ruivo";
+    char palavra2 [20] = "Porto";
+    char palavra3 [20] = "Joaquina Pinto";
+    char palavra4 [20] = "Aveiro";
+    char palavra5 [20] = "Miguel Costa";
+    char palavra6 [20] = "Braga";
+
+    printf("%20s\t%10s\n%20s\t%10s\n%20s\t%10s\n", palavra1, palavra2, palavra3, palavra4, palavra5, palavra6);
+
+
+    return 0;
+}
