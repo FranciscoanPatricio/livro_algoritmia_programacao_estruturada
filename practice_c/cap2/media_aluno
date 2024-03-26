@@ -1,0 +1,25 @@
+//calcular a media de um aluno, perguntando o nome e a nota dos três testes
+#include <stdio.h>
+
+void input(){
+    printf("Insira a nota\n");
+}
+int main (){
+
+    char nome [30];
+    int temp=0;
+    float nota,  media=0;
+
+    printf("Insira o nome do aluno: \n");
+    scanf("%s", &nome );
+
+    for (int i=0; i < 3;i ++){
+        input();
+        scanf("%f", &nota);
+        media += nota;
+        temp ++;
+    }
+
+    printf("A media do/a aluno %s é %.2f valores.", nome, media / temp);
+    return 0;
+}
