@@ -1,0 +1,31 @@
+//fahrenheit to celsius and celsius to fahrenheit
+#include <stdio.h>
+
+int main (){
+    float fahrenheit, celsius;
+    int input ;
+
+    printf("Escolha a opçao que quer fazer(1:Fahrenheit, 2:Celsius, Outro: sair)\n");
+    scanf("%i", &input);
+    
+    if(input == 1){
+
+        printf("Insira o vslor em celsius: \n");
+        scanf("%f", &celsius);
+        fahrenheit = celsius * (9.0/5.0) + 32;
+        printf("Os %.2fºC equivalem a %.2fºF", celsius, fahrenheit);  
+        return 0;
+
+    }else if(input == 2) {
+
+        printf("Insira o vslor em fahrenheit: \n");
+        scanf("%f", &fahrenheit);
+        celsius = (fahrenheit - 32) * (5.0/9.0);
+        printf("Os %.2fºF equivalem a %.2fºC", fahrenheit, celsius);
+        return 0;
+    }else{
+        printf("Opção inválida.");
+        return 0;
+    }
+    return 0;
+}
