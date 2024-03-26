@@ -1,0 +1,22 @@
+//Calcule a despesa media de um turista numa viagem  que cada dia gastou mais 20% do que no dia anterior
+#include <stdio.h>
+
+int main (){
+
+    int diasFerias;
+    float valorFerias, total=0;
+
+    printf("Quantos dias o turista esteve em viagem: \n");
+    scanf("%i", &diasFerias);
+    printf("Qual o valor gasto no 1 dia: \n");
+    scanf("%f", &valorFerias);
+
+    for (int i =0; i<diasFerias;i++ ){
+        total += valorFerias;
+        valorFerias *= 1.2;
+        }
+
+    printf("O turista em %i dias gastou %.2f euros.\n", diasFerias, total);
+    printf("A media do custo diarioa do turista foi %.2f euros.\n", total / (float) (diasFerias));
+    return 0;
+}
