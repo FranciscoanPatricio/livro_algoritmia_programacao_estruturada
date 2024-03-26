@@ -1,0 +1,20 @@
+//Teorema de pitágora, calculo da hipotenusa
+#include <stdio.h>
+#include <math.h>
+
+void input(){ // não retorna nada
+    printf("Insira o valor do cateto: \n");
+}
+
+int main(){
+    float cateto1, cateto2, hipotenusa;
+    input();
+    scanf("%f", &cateto1);
+    input();
+    scanf("%f", &cateto2);
+
+    hipotenusa = sqrt(pow(cateto1, 2) + pow(cateto2, 2));
+
+    printf("A hipotenusa do triangulo e %.2f cm.", hipotenusa);
+    return 0;
+}
