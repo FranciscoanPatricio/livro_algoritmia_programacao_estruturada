@@ -1,0 +1,13 @@
+/*Programa que calcula o capital que resulta da capitalizaçºao composto de x euros durante 2 anos a taxa de 1%*/
+
+#include  <stdio.h>
+#include <math.h>
+
+int main(){
+    float x;
+    printf("Insira o valor a por em juros: \n");
+    scanf("%f", &x);
+    float total = x * pow(((1+1/100.0)),2);
+    printf("%.0f euros capitalizados durante dois anos à taxa anual de 1 %% resultam em %.2f euros.\nEm que %.2f euros foram capitalizações. ", x, total, total - x);
+return 0;
+}
