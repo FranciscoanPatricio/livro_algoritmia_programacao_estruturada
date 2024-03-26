@@ -1,0 +1,21 @@
+//Calcular o valor da f(x,y) = y+sqrt(|2x+10|) / 2x
+#include <stdio.h>
+#include <math.h>
+
+int absoluteValue (float x){ // retorna o valor absoluto
+    return fabs(x); 
+}
+
+int main(){
+    float x, y, total;
+    
+    printf("Insira o valor de x:\n");
+    scanf("%f", &x);
+    printf("Insira o valor de y:\n");
+    scanf("%f", &y);
+
+    total = (y + sqrt(absoluteValue(2*x+10))) / (2.0 * x);
+
+    printf("F(%.2f, %.2f)= %.2f", x, y, total);
+    return 0;
+}
