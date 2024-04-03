@@ -1,0 +1,19 @@
+// Elabore um programa que calcule o total liquido de uma fatura, sabendo que o valor dos produtos, o desconto oferecido por pagamento a pronto e a taxa de iva a aplicar
+#include <stdio.h>
+
+int main (){
+    float valor, desconto, iva;
+
+    printf("Insira o valor do produto: \n");
+    scanf("%f", &valor);
+    printf("Insira o valor do desconto: \n");
+    scanf("%f", &desconto);
+    printf("Insira o valor do IVA: \n");
+    scanf("%f", &iva);
+
+    valor = valor *(1-(desconto/100.0)); // calculo do valor do produto  com o desconto feito
+    valor = valor * (1-(iva/100.0)); // calculo do valor do produto cmenos o valor do IVA
+
+    printf("O valor do produto é %.2f€.", valor);
+    return 0;
+}
