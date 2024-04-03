@@ -12,7 +12,7 @@ int main (){
     scanf("%f", &iva);
 
     valor = valor *(1-(desconto/100.0)); // calculo do valor do produto  com o desconto feito
-    valor = valor * (1-(iva/100.0)); // calculo do valor do produto cmenos o valor do IVA
+    valor = valor * (1+ (iva/100)) ; // calculo do valor do produto com o valor do IVA
 
     printf("O valor do produto é %.2f€.", valor);
     return 0;
