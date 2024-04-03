@@ -13,6 +13,10 @@ void input(){
 int main (){
     float valorSalario, valorComissao, valorVendas, percentagemVendas;
     int numeroCarros;
+    char nomeVendedor [20];
+
+    printf("Insira o nome do vendedor.\n");
+    scanf("%s", &nomeVendedor);
     // confirma se o valor do salário é maior que 0;
     while(true){
         input();
@@ -60,6 +64,6 @@ int main (){
     }
     valorSalario = valorSalario + ((float) (numeroCarros) * valorComissao)  + ( valorVendas * (percentagemVendas/100.0)) ;
 
-    printf("O empregado irá receber %2.f € este mês.\n", valorSalario);
+    printf("O vendedor %s irá receber %2.f € este mês.\n", nomeVendedor,  valorSalario);
     return 0;
 }
