@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+void texto(){
+    printf("Insira um número: \n");
+}
+
+
+int main(){
+    float number1, number2;
+
+    texto();
+    scanf("%f", &number1);
+    texto();
+    scanf("%f", &number2);
+
+    if(number1>number2){
+        printf("O número %d é maior que %d.\n", number1, number2);
+}
+    if else (number1<number2){
+         printf("O número %d é maior que %d.\n", number2, number1);
+}
+else{
+ printf("O número %d é igual a %d.\n", number1, number2);}
+return 0;
+}
