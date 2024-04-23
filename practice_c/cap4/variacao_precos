@@ -1,0 +1,22 @@
+/*Elbore um progrm que determine a variação percentual que sofre o preço de um bem relativamente ao preço
+praticado no ano anterior. Se se tiver verificado um aumento superior a 5% dever´ser emitid um chamada de 
+atenção*/
+
+#include <stdio.h>
+int main(){
+
+    float precoAtual, precoAnterior, percetagemAumento;
+
+    printf("Insira o preço do produto atual: \n");
+    scanf("%f", &precoAtual);
+    printf("Insira o preço do produto do ano anterior: \n");
+    scanf("%f", &precoAnterior);
+
+    percetagemAumento = (precoAtual-precoAnterior) / precoAnterior *100;
+
+    if (percetagemAumento>5.0){
+        printf("O aumento de %.2f%% foi excessivo!!!", percetagemAumento);
+    }
+    
+    return 0;
+}
