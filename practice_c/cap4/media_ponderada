@@ -1,0 +1,32 @@
+/*Elabore um programa que calcule a classificação final de um aluno , sabendo que as notas que obteve tem ponderação diferentes.
+1º teste 20%
+2º teste 50%
+3º teste 30%
+Se a nota final for superior ou igual a 10, o aluno está aprovado. Caso contrário é reprovado.
+*/
+
+#include <stdio.h>
+
+void texto(int x){
+    printf("Insira a nota do %dª teste: \n", x+1);
+}
+
+int main(){
+    float notas[3];
+
+    // Solicita as notas dos três testes e as armazena no array notas[]
+    for(int i= 0; i<3;i++){
+        texto(i);
+        scanf("%f", &notas[i]);
+    }
+     // Calcula a média ponderada
+    float media = notas[0]* 0.2 + notas[1] * 0.5 + notas[2] * 0.3;
+    // Verifica se o aluno foi aprovado ou reprovado com base na média final
+    if (media>=10){
+        printf("O aluno foi aprovado com uma média de %.2f valores.\n", media);
+    }else{
+        printf("O aluno foi reprovado com uma media de %.2f valores.\n", media);
+    }
+
+    return 0;
+}
