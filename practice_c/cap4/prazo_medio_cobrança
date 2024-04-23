@@ -1,0 +1,36 @@
+/*Elabore um programa que calcule o prazo médio de cobrança de dívidas
+(Prazo Medio), conhecendo os seguintes valores:
+• Total de vendas a prestações (Totvendas);
+• Percentagem de pagamento a pronto (Percpronto);
+• Dívidas de clientes (Clidiv);
+• Letras a receber em carteira (Letcart);
+• Letras a receber descontadas (Letdesc).
+prazoMedio = Clidiv+Letcart+Letdesc/(totVendas)*(1-Percpronto)/100)*365*/
+
+#include <stdio.h>
+
+int main(){
+    float prazoMedio, totVendas, percPronto, cliDIV, letCart, letDesc;
+
+    printf("Insira o total de vendas a prestações: \n");
+    scanf("%f", &totVendas);
+    printf("Insira a percentagem de pagamento a pronto: \n");
+    scanf("%f", &percPronto);
+    printf("Insira o valor da divida do cliente: \n");
+    scanf("%f", &cliDIV);
+    printf("Insira as letras a receber em carteira: \n");
+    scanf("%f", &letCart);
+    printf("Insira ãs letras a receber descontadas: \n");
+    scanf("%f", &letDesc);
+
+    prazoMedio = ((cliDIV + letCart + letDesc) / (totVendas * (1-(percPronto/100)))) * 365;
+
+    if(prazoMedio>270.0){
+        printf("O prazo médio de cobrança é %.2f logo é excessivo", prazoMedio);
+    }else if(prazoMedio<180.0){
+        printf("O prazo médio de cobrança é%f logo é favorável", prazoMedio);
+    }else{
+        printf("O prazo médio de cobrança é %f, logo é satisfatório", prazoMedio);
+    }
+    return 0;
+}
