@@ -1,0 +1,36 @@
+// Calcular as raizes de uma equação de segundo grau
+
+#include <stdio.h>
+#include <math.h>
+
+void texto(){
+    printf("Insira um número: \n");
+}
+
+int main(){
+    float number1, number2, number3, x;
+
+    texto();
+    scanf("%f", &number1);
+    texto();
+    scanf("%f", &number2);
+    texto();
+    scanf("%f", &number3);
+
+    //vai verificar se existem raizes
+    x = (number2 * number2) - (4 * number1*number3);
+    //se for maior que 0, tem 2 raizes
+    if ( x>0){
+        float x1 = (-number2+sqrt(x)) / (2*number1);
+        float x2 = (-number2-sqrt(x)) / (2* number1);
+        printf("As raizes são:\nx1=%.2f\nx2=%.2f\n", x1, x2);
+    //se for igual a 0 tem apenas uma raiz
+    }else if(x==0){
+        float x = -number2/(2*number1);
+        printf("Apenas existe uma raiz com o valor de %2.f.\n", x);
+    //não tem raizes se for menor que 0
+    }else{
+        printf("A equação não possui raizes reais.\n");
+    }
+    return 0;
+}
