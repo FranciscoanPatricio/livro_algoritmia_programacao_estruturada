@@ -1,0 +1,17 @@
+//operador ternario
+//Elaborar um programa que diz "parabéns" caso a nota seja maior que 10 e se for menor marcar um novo exame
+
+#include <stdio.h>
+
+int main(){
+    float nota;
+    printf("Insira a nota do aluno:\n");
+    scanf("%f", &nota);
+
+    if(nota>=10.0){
+        printf("Foste aprovado!!!");
+    }else{
+        printf("Foste reprovado, remarca o exame");
+    }
+
+}
