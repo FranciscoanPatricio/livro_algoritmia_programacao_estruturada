@@ -1,9 +1,10 @@
+//Recebe dois numeros, imprime qual o maior ou igual.
+
 #include <stdio.h>
 
 void texto(){
     printf("Insira um número: \n");
 }
-
 
 int main(){
     float number1, number2;
@@ -14,12 +15,12 @@ int main(){
     scanf("%f", &number2);
 
     if(number1>number2){
-        printf("O número %d é maior que %d.\n", number1, number2);
+        printf("O número %.2f é maior que %.2f.\n", number1, number2);
 }
-    if else (number1<number2){
-         printf("O número %d é maior que %d.\n", number2, number1);
+    else if (number1<number2){
+         printf("O número %.2f é maior que %.2f.\n", number2, number1);
 }
 else{
- printf("O número %d é igual a %d.\n", number1, number2);}
+ printf("O número %.2f é igual a %.2f.\n", number1, number2);}
 return 0;
 }
