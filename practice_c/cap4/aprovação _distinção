@@ -1,0 +1,4 @@
+/*Um aluno do 1.º ano de Informática obtém aprovação se obtiver 10 ou mais valores
+em cada uma das disciplinas: Programação, Matemática e Sistemas de Informação;
+é aprovado com distinção se obtiver 16 valores ou mais em, pelo menos, duas
+disciplinas e se for aprovado na terceira; reprova nos restantes casos.*/
