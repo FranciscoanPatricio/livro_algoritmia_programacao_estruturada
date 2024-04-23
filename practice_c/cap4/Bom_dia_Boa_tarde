@@ -1,0 +1,39 @@
+// Imprime "Bom dia", "Boa Tarde" ou "Boa Noite" conforme a hora atual.
+
+#include <stdio.h>
+#include <time.h>
+
+int main(){
+
+    time_t rawtime;
+    struct tm*timeinfo;
+    char buffer[80];
+
+    // Obtém o tempo atual em segundos desde o início do Epoch Unix (1º de janeiro de 1970, 00:00:00 UTC) 
+    // e armazena-o na variável rawtime.
+    time(&rawtime);
+    // Converte o tempo atual representado por rawtime, que está na forma de segundos 
+    // desde o início do Epoch, em uma estrutura de tempo decomposta representando o horário local.
+    // Esta estrutura contém campos como ano, mês, dia, hora, minuto, etc.
+    // O endereço desta estrutura é atribuído à variável ponteiro timeinfo.
+    timeinfo = localtime(&rawtime);
+
+   // strftime (buffer, 80, "Time is %H:%M%p.", timeinfo); vai buscar a hora e minuto e mete no buffer (%I se quiser horas de 12h)
+
+   // vai buscar o valor de hora à timeinfo e mete no buffer
+    strftime(buffer, 80, "%H", timeinfo); 
+
+    //é uma função do C usada para imprimir uma string com \n no fim. printf("%s", buffer);
+    //puts(buffer);  
+    
+    int hour = timeinfo->tm_hour;
+
+    if(hour <12){
+        printf("Bom dia!");
+    }else if( hour<20){
+        printf("Boa Tarde!!!");
+    }else{
+        printf("Boa Noite!!!");
+    }
+    return 0;
+}
