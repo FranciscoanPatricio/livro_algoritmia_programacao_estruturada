@@ -1,0 +1,27 @@
+//Faça um prorama que informa os dias do mês dependendo do ano
+
+#include <stdio.h>
+
+int main(){
+    int ano, mes;
+    char *meses[12] = {"Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"};
+
+    printf("Insira o ano: \n");
+    scanf("%d", &ano);
+    printf("Insira o mês: \n");
+    scanf("%d", &mes);
+
+        if(mes==1|| mes==3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12 ){
+            printf("O mês de %s de %d tem 31 dias.\n", meses[mes-1], ano);
+        }else if(mes == 2){
+            if(ano%4==0){
+                printf("O mês de %s de %d tem 29 dias pois foi um ano bissesto.\n", meses[mes-1], ano);
+            }else{
+                printf("O mês de %s de %d tem 28 dias.\n", meses[mes-1], ano);
+            }
+        }else{
+            printf("O mês de %s de %d tem 30 dias.\n", meses[mes-1], ano);
+        }
+    return 0;
+}
+
