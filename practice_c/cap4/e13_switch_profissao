@@ -1,0 +1,39 @@
+/*Elabore um programa que a partir da categoria profissional imprime o salário
+A, B, C - 1500€
+D - 1250€
+E e F - 1000€
+outra - 500€*/
+
+ #include <stdio.h>
+
+ int main(){
+    char categoria [1];
+    printf("Insira a categoria do profissional: \n");
+    scanf("%c", &categoria[0]);
+
+    switch (categoria[0])
+    {
+    case 'A':
+        printf("O salário do profissional da categoria %c é 1500€.\n", categoria[0]);
+        break;
+    case 'B':
+        printf("O salário do profissional da categoria %c é 1500€.\n", categoria[0]);
+        break;
+    case 'C':
+        printf("O salário do profissional da categoria %c é 1500€.\n", categoria[0]);
+        break;
+    case 'D':
+        printf("O salário do profissional da categoria %c é 1250€.\n", categoria[0]);
+        break;
+    case 'E':
+        printf("O salário do profissional da categoria %c é 1000€.\n", categoria[0]);
+        break;
+    case 'F':
+        printf("O salário do profissional da categoria %c é 1000€.\n", categoria[0]);
+        break;
+    default:
+        printf("O salário do profissional da categoria %c é 500€.\n", categoria[0]);
+        break;
+    }
+    return 0;
+ }
