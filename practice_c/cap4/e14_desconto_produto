@@ -1,0 +1,28 @@
+/*Elabore um programa que baseado na categoria de produtos tem diferentes descontos:
+Vegetais tem desconto 0.15
+laticinios, cereais e agua tem desconto de 0,1
+restantes produtos tem desconto de 0,01*/
+
+#include <stdio.h>
+
+int main(){
+    int option;
+    double desconto=0.01;
+    printf("Escolha a categoria do produto: \n");
+    printf("1)Vegetais\n2)Lacticinios\n3)Cereais\n4)Água\nOutro) Outro produto\n");
+    scanf("%d", &option);
+
+    switch (option)
+    {
+    case 1:
+        desconto = 0.15;
+        break;
+    case 2:
+    case 3:
+    case 4:
+        desconto = 0.1;
+        break;
+    }
+    printf("O produto selecionado tem um desconto de %.2lf.", desconto);
+    return 0;
+}
