@@ -1,0 +1,54 @@
+//elabore uma claculadora
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void texto(){
+    printf("Insira um número: \n");
+}
+
+int adicao(float x, float y){
+        float total=0;
+        total = x + y;
+        return total;
+    }
+int subtracao(){}
+int multiplicacao(){}
+int divisao(){}
+
+void menu(){
+    float number1, number2, total;
+    int operacao;
+    
+    texto();
+    scanf("%f", &number1);
+    printf("Escolha uma operação:\n1)Adição\n2)Subtração\n3)Multiplicação4)Divisão\nOutro)Sair\n");
+    scanf("%d", &operacao);
+    if(operacao!=1 && operacao !=2 && operacao !=3 && operacao !=4){
+        exit(0);
+    }
+    texto();
+    scanf("%f", &number2);
+
+    switch (operacao)
+    {
+    case 1:
+        total = adicao(number1, number2);
+        printf("%.2f\n", total);
+        break;
+    case 2:
+        total = subtracao();
+        break;
+    case 3:
+        total = multiplicacao();
+        break;
+    case 4:
+        total = divisao();
+        break;
+    }
+}
+int main(){
+    while(1){
+        menu();
+    }
+}
