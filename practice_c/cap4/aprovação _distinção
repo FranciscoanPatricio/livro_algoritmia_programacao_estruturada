@@ -2,3 +2,30 @@
 em cada uma das disciplinas: Programação, Matemática e Sistemas de Informação;
 é aprovado com distinção se obtiver 16 valores ou mais em, pelo menos, duas
 disciplinas e se for aprovado na terceira; reprova nos restantes casos.*/
+
+
+#include <stdio.h>
+
+int main(){
+    float notaMatematica, notaProgramacao, notaSistemas, media=0;
+
+    printf("Insira a nota do aluno em Matemática: \n");
+    scanf("%f", &notaMatematica);
+    printf("Insira a nota do aluno em Programação: \n");
+    scanf("%f", &notaProgramacao);
+    printf("Insira a nota do aluno em Sistemas de Informação: \n");
+    scanf("%f", &notaSistemas);
+ 
+    media = (notaMatematica + notaProgramacao + notaSistemas) /3;
+
+    if (media >=10){
+        if((notaMatematica>=16 && notaProgramacao>=16)|| (notaProgramacao>=16 &&notaSistemas>=16) || (notaMatematica>=16 && notaSistemas>=16)){
+            printf("O aluno foi aprovado com distinção com uma média de %.2f valores.", media);
+        }else{
+            printf("O aluno foi aprovado com uma média de %.2f valores.\n", media);
+        }
+    }else{
+        printf("O aluno foi reprovado com média de %.2f valores.\n", media);
+    }
+    return 0;
+}
