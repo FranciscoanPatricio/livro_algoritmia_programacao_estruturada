@@ -14,11 +14,7 @@ outra - 500€*/
     switch (categoria[0])
     {
     case 'A':
-        printf("O salário do profissional da categoria %c é 1500€.\n", categoria[0]);
-        break;
     case 'B':
-        printf("O salário do profissional da categoria %c é 1500€.\n", categoria[0]);
-        break;
     case 'C':
         printf("O salário do profissional da categoria %c é 1500€.\n", categoria[0]);
         break;
@@ -26,8 +22,6 @@ outra - 500€*/
         printf("O salário do profissional da categoria %c é 1250€.\n", categoria[0]);
         break;
     case 'E':
-        printf("O salário do profissional da categoria %c é 1000€.\n", categoria[0]);
-        break;
     case 'F':
         printf("O salário do profissional da categoria %c é 1000€.\n", categoria[0]);
         break;
