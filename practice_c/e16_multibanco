@@ -1,0 +1,133 @@
+/*fazer um terminal multibanco com o seguinte menu:
+1)Levantamento
+2)Depósito
+)Pagamentos de serviço
+4)Fim*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void talao(){
+    printf("Retire o Talão");
+}
+void retireDinheiro(){
+    printf("Retire o dinheiro");
+}
+
+void pagamentoDeServico(){
+    printf("Pagamento de Serviços\n");
+    int entidade=0, referencia=0, valor=0;
+    while(1){
+        if(entidade==0 || entidade <10000 || entidade >99999){
+        printf("Entidade:\t\t");
+        scanf("%d", &entidade);
+        }   else{
+        break;
+        }
+    }
+    while(1){
+        if(referencia==0 || referencia <100000000 || referencia >999999999){
+        printf("Referência:\t\t");
+        scanf("%d", &referencia);
+        }   else{
+        break;
+        }
+    }
+    while(1){
+        if(valor==0 || valor <0 || valor >100000){
+        printf("Valor:\t\t");
+        scanf("%d", &valor);
+        }   else{
+        break;
+        }
+    }
+    talao();
+}
+
+void deposito(){
+    int valor;
+    printf("Depósito\n");
+    printf("Introduza o dinheiro ou cheque\n");
+    scanf("%d", &valor);
+    printf("Depositou %d€\n", valor);
+    talao();
+}
+
+void levantamento(){
+    printf("Levantamento\n");
+    printf("Escolha uma quantia a levantar:\n");
+    printf("1)20€\t2)40€\n3)60€\t4)100€\n5)200€\t6)Outro valorOutro)Sair");
+    int option;
+    scanf("%d", &option);
+    int valor=0;
+
+    switch (option)
+    {
+    case 1:
+        printf("Levantou 20€\n");
+        retireDinheiro();
+        talao();
+        break;
+    case 2:
+        printf("Levantou 40€\n");
+        retireDinheiro();
+        talao();
+        break;
+    case 3:
+        printf("Levantou 60€\n");
+        retireDinheiro();
+        talao();
+        break;
+    case 4:
+        printf("Levantou 100€\n");
+        retireDinheiro();
+        talao();
+        break;
+    case 5:
+        printf("Levantou 200€\n");
+        retireDinheiro();
+        talao();
+        break;
+    case 6:
+        while(1){
+            if(valor>200 || valor%10!=0  || valor==0 ){
+                printf("Insira a quantidade a levantar(multiplo de 10 e menor que 200€)\n");
+                scanf("%d", &valor);
+            }else{
+                break; 
+            }
+        }
+        printf("Levantou %d€\n", valor);
+        retireDinheiro();
+        talao();
+        break;
+    default:
+        break;
+    }
+}
+
+void menu(){
+    int option;
+    printf("Escolha uma opção:");
+    printf("1)Levantamento\n2)Depósito\n3)Pagamento de Serviços\nOutro)Sair\n");
+    scanf("%d", &option);
+
+    switch(option){
+        case 1: 
+            levantamento();
+            break;
+        case 2:
+            deposito();
+            break;
+        case 3:
+            pagamentoDeServico();
+        default:
+            exit(0);
+    }
+}
+
+int main(){
+    while(1){
+        menu();
+    }
+}
