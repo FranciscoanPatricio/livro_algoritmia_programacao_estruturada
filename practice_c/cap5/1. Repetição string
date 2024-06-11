@@ -1,0 +1,23 @@
+//Elabore um programa que imprima 10 vezes "Hello World!
+
+    #include <stdio.h>
+  
+    int main(){
+        int i =0;
+        
+        while(i<10){
+            printf("Hello World!\n");
+            i++;
+        }
+        printf("--------------------");
+        for(int j =0;j<10;j++){
+            printf("Hello World!\n");
+        }
+        printf("--------------------");                                   
+        int j=0;
+        for(;j<10;){
+            printf("Hello World!\n");
+            j++;
+        }
+        return 0;
+    }
