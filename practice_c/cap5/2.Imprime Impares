@@ -1,0 +1,23 @@
+//Elabore um programa que imprima os números impares do intervalo min, max)
+
+#include <stdio.h>
+
+int main(){
+    int min=0, max=0, impar=0;
+
+    while(1){
+        if(min>=max){
+            printf("Insira o valor minimo: \n");
+            scanf("%d", &min);
+            printf("Insira o valor máximo: \n");
+            scanf("%d", &max);
+        }else
+            break;
+        
+    }
+    for(min; min<=max;min++){
+        if(min%2!=0){
+            printf("%d\t", min);
+        }
+    }
+}
