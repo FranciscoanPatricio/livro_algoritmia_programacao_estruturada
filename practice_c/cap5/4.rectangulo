@@ -1,0 +1,30 @@
+//Elabore um programa que faz um rectangulo sabendo a sua altura e comprimento
+
+#include <stdio.h>
+
+int main(){
+    char ver='x', espac=' ';
+    int a=1, alt=0,l=1, larg=0;
+    printf("Insira a altura do rectangulo:\n");
+    scanf("%d", &alt);
+    printf("Insira o comprimento do rectangulo:\n");
+    scanf("%d", &larg);
+
+
+    for(a;a<=alt;a++){
+        if(a==alt || a==1){
+            printf("%c", ver);
+             for(l=1;l<=larg;l++){
+                printf("%c", ver);
+            }
+            printf("%c\n", ver);                         
+        }else{
+            printf("%c", ver);
+            for(l=1;l<=larg;l++){
+                printf("%c", espac);
+            }
+            printf("%c\n", ver);
+        }
+    }                        
+    return 0;
+}
