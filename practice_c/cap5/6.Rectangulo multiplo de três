@@ -1,0 +1,33 @@
+//Elabore um programa que faça um rectangulo de comprimento e largura com numeros multiplos de 3
+
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+    double multiplo; 
+    int l,c, a;
+
+    printf("Insira a largura do rectangulo:\n");
+    scanf("%d", &l);
+    printf("Insira a comprimento do rectangulo:\n");
+    scanf("%d", &c);
+    
+    multiplo=pow((double)10,(double)(c-1));
+    
+    for(int i=1;i<=(l*c);i++){
+        a=1;
+        while(a){
+            if((int)(multiplo)%3==0){
+                printf("%.0lf", multiplo);
+                a=0;
+                multiplo++;
+                break;
+            }
+            multiplo++;
+        }
+        if(i%c==0){
+            printf("\n");
+        }
+    }
+    return 0;
+}
