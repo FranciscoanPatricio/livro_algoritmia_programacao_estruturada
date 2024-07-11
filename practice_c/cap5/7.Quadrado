@@ -1,0 +1,21 @@
+//Elabore um programa que imprima um quadrado de X e O                                                                                                                    
+#include <stdio.h>
+
+int main(){
+    int numeroLinhas;
+
+    printf("Insira quantas linhas/colunas quer: \n");
+    scanf("%d", &numeroLinhas);
+
+    
+    for(int i=0;i<numeroLinhas;i++){
+        for(int j=0;j<numeroLinhas;j++){
+            if(i%2==0 && j%2==0  || i%2!=0 && j%2!=0 )
+                printf("X ");
+            else if (i%2==0 && j%2!=0  || i%2!=0 && j%2==0)
+                printf("O ");
+        }
+        printf("\n");
+    }
+    return 0;
+}
